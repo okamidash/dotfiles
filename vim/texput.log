@@ -1,0 +1,27 @@
+This is TeXk, Version 3.14159265 (TeX Live 2017/Arch Linux) (preloaded format=tex 2018.6.8)  11 JUN 2018 05:12
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**&tex
+
+*
+! Interruption.
+<*> 
+    
+? 
+(Please type a command or say `\end')
+*
+! Interruption.
+<*> 
+    
+? \end
+Type <return> to proceed, S to scroll future error messages,
+R to run without stopping, Q to run quietly,
+I to insert something, 
+H for help, X to quit.
+? ^^[[A^^X
+Type <return> to proceed, S to scroll future error messages,
+R to run without stopping, Q to run quietly,
+I to insert something, 
+H for help, X to quit.
+? x
+No pages of output.

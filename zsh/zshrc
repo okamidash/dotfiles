@@ -1,0 +1,43 @@
+# Set the prompt
+autoload -Uz promptinit
+promptinit
+
+# Load ZGEN
+source "${HOME}/.zgen/zgen.zsh"
+
+# if the init scipt doesn't exist
+if ! zgen saved; then
+    echo "Creating a zgen save"
+    zgen load chrissicool/zsh-256color
+    zgen load zsh-users/zsh-autosuggestions
+    zgen load zsh-users/zsh-completions src
+    zgen load zsh-users/zsh-history-substring-search
+    zgen load zdharma/fast-syntax-highlighting
+    zgen loadall <<EOPLUGINS
+        /usr/share/doc/pkgfile/command-not-found.zsh
+        $HOME/config/zsh/ext/alias.zsh
+        $HOME/config/zsh/ext/exports.zsh
+        $HOME/config/zsh/ext/functions.zsh
+        $HOME/config/zsh/ext/keybindings.zsh
+        $HOME/config/zsh/ext/modules.zsh
+        $HOME/config/zsh/ext/options.zsh
+        $HOME/config/zsh/ext/style.zsh
+EOPLUGINS
+    # save all to init script
+    zgen save
+fi
+
+export PATH=$PATH:/home/okami/.linkerd2/bin
+export PATH=$PATH:/home/okami/.cargo/bin
+#'xrdb -load ~/.Xresources
+
+#------------------------------
+# History stuff
+#------------------------------
+HISTFILE=~/config/zsh/histfile
+HISTSIZE=5000
+SAVEHIST=6000
+eval "$(starship init zsh)"
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/bin/mcli mcli

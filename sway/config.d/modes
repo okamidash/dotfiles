@@ -1,0 +1,50 @@
+mode "resize" {
+    # left will shrink the containers width
+    # right will grow the containers width
+    # up will shrink the containers height
+    # down will grow the containers height
+    bindsym $left resize shrink width 10px
+    bindsym $down resize grow height 10px
+    bindsym $up resize shrink height 10px
+    bindsym $right resize grow width 10px
+
+    # ditto, with arrow keys
+    bindsym Left resize shrink width 10px
+    bindsym Down resize grow height 10px
+    bindsym Up resize shrink height 10px
+    bindsym Right resize grow width 10px
+
+    # return to default mode
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+r mode "resize"
+
+set   $mode_layout (W) Stacking,  (S) Tabbed,  (E) Split,  (R) Resize
+mode "$mode_layout" {
+        bindsym w layout stacking,      mode "default"
+        bindsym s layout tabbed,        mode "default"
+        bindsym e layout toggle split,         mode "default"
+        bindsym r mode "resize"
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+t mode "default"
+}
+
+bindsym $mod+t mode "$mode_layout"
+set $Locker swaylock --font Hack-Regular -f --color 181c20
+set $mode_system System (l) lock, (e) logout, (s) sleep, (h) hibernate, (r) reboot, (Shift+s) shutdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id $Locker, mode "default"
+    bindsym e exec --no-startup-id i3-msg exit, mode "default"
+    bindsym s exec --no-startup-id $Locker & sleep 1 & systemctl suspend, mode "default"
+    bindsym h exec --no-startup-id $Locker & systemctl hibernate, mode "default"
+    bindsym r exec --no-startup-id systemctl reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+p mode "$mode_system"

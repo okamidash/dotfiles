@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/okami/.vnc'
+let g:netrw_dirhist_2='/home/okami'
+let g:netrw_dirhist_3='/home/okami/config/i3'
+let g:netrw_dirhist_4='/home/okami/config/zsh'
+let g:netrw_dirhist_5='/home/okami/Backups'
+let g:netrw_dirhist_6='/etc/ansible'
+let g:netrw_dirhist_7='/run/media/okami/a39e6b2e-587f-4aeb-b74f-511b8e91aabe'
+let g:netrw_dirhist_8='/home/okami/old/etc/ansible'

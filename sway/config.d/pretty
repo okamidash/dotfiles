@@ -1,0 +1,50 @@
+gaps inner 10
+gaps outer 5
+for_window [class="^.*"] border pixel 4
+default_border none
+#hide_edge_borders both
+font pango:SourceCodePro Medium 9
+# Special
+set $bg #181c20
+set $fg #c5c8c6
+set $cc #c5c8c6
+
+# black
+set $color0       #3d424b
+set $color8       #373b41
+
+# red
+set $color1       #d65656
+set $color9      #d68e8e
+
+# green
+set $color2      #98d671
+set $color10     #b1d69f
+
+# yellow
+set $color3      #d69256
+set $color11     #d6b295
+
+# blue
+set $color4      #5f819d
+set $color12     #a2aed6
+
+# magenta
+set $color5      #85678f
+set $color13     #9775a3
+
+# cyan
+set $color6      #5e8d87
+set $color14     #c0d1d6
+
+# white
+set $color7      #707880
+set $color15     #c5c8c6
+
+
+# class                    border   backgr.   text    indicator   child_border
+client.focused             $color13 $color13  $color15     $color13    $color13
+client.focused_inactive    $bg      $bg       $fg     $bg         $bg
+client.unfocused           $bg      $bg       $fg     $bg         $bg
+client.urgent              $color1  $color1   $fg     $color1     $color1
+client.placeholder         #000000 #0c0c0c #ffffff #000000   #0c0c0c

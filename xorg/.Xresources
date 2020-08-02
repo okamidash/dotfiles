@@ -1,0 +1,78 @@
+!*.background:          #1E1F29
+!*.foreground:          #D6D6D6
+*.cursorColor:         #c5c8c6
+*.shell:               /bin/zsh
+*.termName:         xterm-256color
+!*.background:    #252f3a
+*.background:   #263238
+*.color0:        #181d22
+*.color1:        #AA7386
+*.color10:       #768895
+*.color11:       #9DA5AE
+*.color12:       #B0BBC5
+*.color13:       #F2ACC2
+*.color14:       #B7CBD6
+*.color15:       #dcdde0
+!*.color2:        #768895
+*.color2: #3a8de6
+*.color3:        #9DA5AE
+*.color4:        #B0BBC5
+*.color5:        #F2ACC2
+*.color6:        #B7CBD6
+*.color66:       #181d22
+*.color7:        #dcdde0
+*.color8:        #9a9a9c
+*.color9:        #AA7386
+*.foreground:    #dcdde0
+
+!*.color0:       #100d17
+!*.color8:       #2B6E70
+!.color1:       #d7699a
+!*.color9:       #FF79C6
+!*.color2:       #80d468
+!*.color10:      #a3f2a0
+!*.color3:       #d7a169
+!*.color11:      #f5cda2
+!*.color4:       #6985d7
+!*.color12:      #a2c1f5
+!*.color5:       #c86ad4
+!*.color13:      #d2a2f5
+!*.color6:       #6fccd1
+!*.color14:      #a0e9f2
+!*.color7:       #dbdcdc
+!*.color15:      #fdfdfd
+
+st.termname: st-256color
+st.shell: /bin/zsh
+! The following options options can be reloaded via USR1 signal.
+st.font:              Liberation Mono:pixelsize=12:antialias=true:autohint=true;
+st.borderpx:          8
+! Available cursor values: 2 4 6 7 = █ _ | ☃ ( 1 3 5 are blinking versions)
+st.cursorshape:       2
+! thickness of underline and bar cursors
+st.cursorthickness:   2
+! 0: normal blinking, 1: leave cursor border and blink with cursors background
+st.cursorblinkstyle:  0
+! 0: cursor blinks with a constant interval; 1: blinking cycle resets on key input
+st.cursorblinkontype: 1
+st.bold_font:         0
+st.xfps:              120
+st.actionfps:         30
+! Amount of lines scrolled
+st.mouseScrollLines:  1
+! Kerning / character bounding-box height multiplier
+st.chscale:           1.0
+! Kerning / character bounding-box width multiplier
+st.cwscale:           1.0
+! blinking timeout for terminal and cursor blinking (0 disables)
+st.blinktimeout:      800
+! bell volume. Value between -100 and 100. (0 disables)
+st.bellvolume:        100
+! this is a char that is exposed like so: `printf '\033[z'`
+st.prompt_char:       $
+! This option is can be preedit style. Available values: `root` `overthespot` (Default taken `root`)
+st.imstyle: root
+! opacity==255 means what terminal will be not transparent, 0 - fully transparent
+st.opacity: 250
+
+rofi.font: hack 10
