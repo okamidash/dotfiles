@@ -1,0 +1,7 @@
+zsh/histfile
+._sync*
+i3/config
+rhasspy
+dunst
+*histfile*
+vim/undo
