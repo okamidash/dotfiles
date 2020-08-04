@@ -1,0 +1,14 @@
+#### Mako config
+
+#
+# Colors and fonts
+#
+font=Liberation Mono 12
+
+background-color=#181c20
+text-color=#c5c8c6
+border-color=#3a6181
+anchor=top-right
+border-radius=5
+default-timeout=5000
+width=400

@@ -1,2 +1,4 @@
 for_window [class="fzf_launch"] floating enable
 for_window [class="fzf_launch"] border none
+
+smart_gaps on

@@ -38,6 +38,6 @@ HISTFILE=~/config/zsh/histfile
 HISTSIZE=5000
 SAVEHIST=6000
 eval "$(starship init zsh)"
-
+TERM=xterm-256color
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/bin/mcli mcli

@@ -2,8 +2,17 @@ gaps inner 10
 gaps outer 5
 for_window [class="^.*"] border pixel 4
 default_border none
-#hide_edge_borders both
-font pango:SourceCodePro Medium 9
+# hide_edge_borders both
+
+#
+## Set the font
+#
+set $font pango:SourceCodePro Medium 9
+#set $font pango:Liberation Sans Medium 9
+set $statusfont pango:Nimbus Sans 9
+
+font $font
+
 # Special
 set $bg #181c20
 set $fg #c5c8c6
@@ -14,7 +23,7 @@ set $color0       #3d424b
 set $color8       #373b41
 
 # red
-set $color1       #d65656
+set $color1      #d65656
 set $color9      #d68e8e
 
 # green
@@ -26,12 +35,12 @@ set $color3      #d69256
 set $color11     #d6b295
 
 # blue
-set $color4      #5f819d
+set $color4      #3a6181
 set $color12     #a2aed6
 
 # magenta
 set $color5      #85678f
-set $color13     #9775a3
+set $color13     #d4a8d6
 
 # cyan
 set $color6      #5e8d87
@@ -40,11 +49,52 @@ set $color14     #c0d1d6
 # white
 set $color7      #707880
 set $color15     #c5c8c6
+#===============================================================================
+#
+# Sets all the colors for statusline and workspaces
+#
+
+# Focused windows and workspaces
+set $focused_color    $color4
+set $focused_text     $fg
+
+# Inactive windows and workspaces
+set $inactive_color   $color0
+set $inactive_text    $fg
+
+# Active Windows and workspaces
+set $active_color     $color0
+set $active_text      $fg
+
+# Urgent Windows and workspaces
+set $urgent_color     $color1
+set $urgent_text      $fg
+
+# Unfocused Windows
+set $unfocused_color  $bg
+set $unfocused_text   $fg
+#===============================================================================
+
+#   Background
+set $sbar_bg          $bg
+
+#   Statusline
+set $sbar_status      $fg
+
+#   Focused Workspace Background
+set $sbar_focused_bg  $bg
+
+#   Statusbar <state> workspace
+#                           border           background        text
+set $sbar_focused_ws        $focused_color   $focused_color    $focused_text
+set $sbar_inactive_ws       $inactive_color  $inactive_color   $inactive_text
+set $sbar_active_ws         $active_color    $active_color     $active_text
+set $sbar_urgent_ws         $urgent_color    $urgent_color     $urgent_text
 
 
-# class                    border   backgr.   text    indicator   child_border
-client.focused             $color13 $color13  $color15     $color13    $color13
-client.focused_inactive    $bg      $bg       $fg     $bg         $bg
-client.unfocused           $bg      $bg       $fg     $bg         $bg
-client.urgent              $color1  $color1   $fg     $color1     $color1
-client.placeholder         #000000 #0c0c0c #ffffff #000000   #0c0c0c
+# class                     border           background        text             indicator            child_border
+client.focused              $focused_color   $focused_color    $focused_text    $focused_color       $focused_color
+client.focused_inactive     $inactive_color  $inactive_color   $inactive_text   $inactive_color      $inactive_color
+client.unfocused            $unfocused_color $unfocused_color  $unfocused_text  $unfocused_color     $unfocused_color
+client.urgent               $urgent_color    $urgent_color     $urgent_text     $urgent_color        $urgent_color
+client.placeholder          #000000 #0c0c0c #ffffff #000000   #0c0c0c

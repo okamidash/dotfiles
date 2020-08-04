@@ -1,6 +1,23 @@
-set $gnome-schema org.gnome.desktop.interface
+#set $gnome-schema org.gnome.desktop.interface
 exec_always {
-    gsettings set $gnome-schema gtk-theme Aritim-Dark-GTK'
-    gsettings set $gnome-schema icon-theme 'Arc'
+    gsettings set $gnome-schema gtk-theme 'oomox-arc-dark'
+    gsettings set $gnome-schema icon-theme 'oomox-arc-dark'
     gsettings set $gnome-schema cursor-theme 'bloom'
+}
+exec xrdb -load .Xdefaults
+
+## Program startups
+exec {
+  # Discord
+  discord
+  # Slack
+  slack
+  # Spotify
+  spotify
+  # Firefox
+  firefox-developer-edition
+  # Telegram
+  telegram-desktop
+  # Atom
+  atom
 }

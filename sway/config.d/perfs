@@ -1,10 +1,12 @@
 ### Output configuration
+set $mn-left DP-2
+set $mn-right DVI-D-1
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output DP-2 bg /home/okami/Pictures/Wallpapers/1440p/035.jpg fill
-output DVI-D-1 bg /home/okami/Pictures/Wallpapers/1440p/043.jpg fill
+output $mn-left bg /home/okami/Pictures/Wallpapers/1440p/035.jpg fill
+output $mn-right bg /home/okami/Pictures/Wallpapers/1440p/043.jpg fill
 
-output DVI-D-1 resolution 2560x1440 position 2560,0
-output DP-2 resolution 2560x1440 position 0,0
+output $mn-left resolution 2560x1440 position 0,0
+output $mn-right resolution 2560x1440 position 2560,0
 #### Inputs
 input * {
     xkb_layout "gb"
