@@ -2,7 +2,7 @@ set $ws1  Browser
 set $ws2  Code
 set $ws3  Chat
 set $ws4  Music
-set $ws5  5
+set $ws5  Mail
 set $ws6  6
 set $ws7  7
 set $ws8  8
@@ -16,17 +16,15 @@ assign [class="discord"]                  workspace $ws3
 assign [class="Slack"]                    workspace $ws3
 assign [app_id="telegramdesktop"]         workspace $ws3
 assign [class="spotify"]                  workspace $ws4
+assign [class="Thunderbird"]                  workspace $ws5
 for_window [class="Spotify"] move window to workspace $ws4
-
-### Workspace specific
-workspace $ws3 workspace_layout stacking
 
 #### Workspace outputs
 workspace $ws1 output $mn-left
 workspace $ws2 output $mn-left
 workspace $ws3 output $mn-right
 workspace $ws4 output $mn-right
-
+workspace $ws5 output $mn-right
 # switch to workspace
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2

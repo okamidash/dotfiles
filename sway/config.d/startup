@@ -5,7 +5,6 @@ exec_always {
     gsettings set $gnome-schema cursor-theme 'bloom'
 }
 exec xrdb -load .Xdefaults
-
 ## Program startups
 exec {
   # Discord
@@ -20,4 +19,8 @@ exec {
   telegram-desktop
   # Atom
   atom
+  # Nextcloud
+  nextcloud
+  # Mail client
+  thunderbird
 }
