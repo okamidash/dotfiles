@@ -1,10 +1,9 @@
 # Set the prompt
 autoload -Uz promptinit
 promptinit
-
 # Load ZGEN
 source "${HOME}/.zgen/zgen.zsh"
-
+export XDG_CONFIG_HOME="$HOME/.config"
 # if the init scipt doesn't exist
 if ! zgen saved; then
     echo "Creating a zgen save"
@@ -27,8 +26,10 @@ EOPLUGINS
     zgen save
 fi
 
+source <(kubectl completion zsh)
 export PATH=$PATH:/home/okami/.linkerd2/bin
 export PATH=$PATH:/home/okami/.cargo/bin
+export PATH="$HOME/.local/bin":$PATH
 #'xrdb -load ~/.Xresources
 
 #------------------------------

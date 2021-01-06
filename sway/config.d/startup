@@ -10,17 +10,15 @@ exec {
   # Discord
   discord
   # Slack
-  slack
+#  slack
   # Spotify
   spotify
   # Firefox
-  firefox-developer-edition
-  # Telegram
-  telegram-desktop
+  MOZ_ENABLE_WAYLAND=1 firefox-developer-edition
   # Atom
   atom
   # Nextcloud
   nextcloud
-  # Mail client
-  thunderbird
+  # Polkit agent
+  /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 }

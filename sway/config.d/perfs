@@ -5,10 +5,9 @@ set $mn-right DVI-D-1
 output $mn-left bg /home/okami/Pictures/Wallpapers/1440p/035.jpg fill
 output $mn-right bg /home/okami/Pictures/Wallpapers/1440p/043.jpg fill
 
-output $mn-left resolution 2560x1440 position 0,0
-output $mn-right resolution 2560x1440 position 2560,0
+output $mn-left resolution 2560x1440 position 2560,0
+output $mn-right resolution 2560x1440 position 0,0
 #### Inputs
 input * {
     xkb_layout "gb"
-    xkb_variant "extd"
 }
