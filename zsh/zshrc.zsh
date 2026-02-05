@@ -50,6 +50,15 @@ source $BASEDIR/completion.zsh
 # ==== ALIASES ====
 alias ls='ls -aF --color=auto'
 
+autoload -U promptinit; promptinit
+zmodload zsh/nearcolor
+zstyle :prompt:pure:path            color '#00ccff'
+zstyle :prompt:pure:prompt:error    color '#ff0000'
+zstyle :prompt:pure:prompt:success  color '#6600cc'
+zstyle :prompt:pure:host            color '#333399'
+zstyle :prompt:pure:user            color '#29a3a3'
+zstyle :prompt:pure:user:root       color '#66ffff'
+
 # ==== PROMPT ====
 zinit ice pick"async.zsh" src"pure.zsh" # with zsh-async library that's bundled with it.
 zinit light sindresorhus/pure
