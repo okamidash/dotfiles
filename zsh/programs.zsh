@@ -25,5 +25,3 @@ zinit light zdharma-continuum/history-search-multi-word
 # Other useful plugins
 zinit wait lucid for \
     hlissner/zsh-autopair
-
-zinit pack for ls_colors

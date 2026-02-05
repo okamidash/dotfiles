@@ -26,6 +26,7 @@ ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE="20"
 ZSH_AUTOSUGGEST_USE_ASYNC=1
 
 WORDCHARS='*?_-[]~&;!#$%^(){}<>|'
+source $BASEDIR/dircolors.zsh
 
 
 # load zinit annexes 
@@ -45,6 +46,7 @@ zinit snippet OMZL::termsupport.zsh      # Terminal Titles
 source $BASEDIR/programs.zsh
 # ==== SETUP COMPLETION STUFF ====
 source $BASEDIR/completion.zsh
+
 # ==== ALIASES ====
 alias ls='ls -aF --color=auto'
 
