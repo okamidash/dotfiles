@@ -12,15 +12,23 @@ zinit wait lucid for \
         zsh-users/zsh-completions
 
 # better Ctrl+R history searching
-zinit ice wait lucid depth"1" \
-  atload"
-    zstyle ':history-search-multi-word' highlight-color 'fg=yellow,bold'
-    zstyle ':history-search-multi-word' page-size 15
-    zstyle ':plugin:history-search-multi-word' active 'standout'
-    zstyle ':plugin:history-search-multi-word' reset-prompt-protect 1
-  " \
-  trackbinds
-zinit light zdharma-continuum/history-search-multi-word
+#zinit ice wait lucid depth"1" \
+#  atload"
+#    zstyle ':history-search-multi-word' highlight-color 'fg=yellow,bold'
+#    zstyle ':history-search-multi-word' page-size 15
+#    zstyle ':plugin:history-search-multi-word' active 'standout'
+#    zstyle ':plugin:history-search-multi-word' reset-prompt-protect 1
+#  " \
+#  trackbinds
+#zinit light zdharma-continuum/history-search-multi-word
+
+zinit snippet OMZ::plugins/git/git.plugin.zsh
+zinit load 'zsh-users/zsh-history-substring-search'
+zinit ice wait atload'_history_substring_search_config'
+#bindkey '^[[A' history-substring-search-up
+#bindkey '^[[B' history-substring-search-down
+bindkey "$terminfo[kcuu1]" history-substring-search-up
+bindkey "$terminfo[kcud1]" history-substring-search-down
 
 # Other useful plugins
 zinit wait lucid for \

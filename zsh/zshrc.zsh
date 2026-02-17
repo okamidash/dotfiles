@@ -62,3 +62,9 @@ zstyle :prompt:pure:user:root       color '#66ffff'
 # ==== PROMPT ====
 zinit ice pick"async.zsh" src"pure.zsh" # with zsh-async library that's bundled with it.
 zinit light sindresorhus/pure
+
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+alias kubectx=kubectl-ctx
+alias konfig=kubectl-konfig
+alias kubens=kubectl-ns
+
